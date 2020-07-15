@@ -1,0 +1,95 @@
+body
+{
+  font-family: arial;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.container
+{
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  grid-template-rows: 40px 50px 1fr 70px;
+}
+
+.header
+{
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 2em;
+}
+
+.marcador
+{
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 3em;
+}
+
+.vs
+{
+  align-self: center;
+  font-size: 2em;
+}
+
+.figuraElegida img
+{
+  width: 100%;
+}
+
+.figuras
+{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.figuras button
+{
+  margin: 0 20px;
+  border-radius: 40px;
+  background-size: cover;
+  background-image: url('../image/piedra.png');
+  width: 70px;
+  height: 70px;
+}
+
+.figuras button:nth-of-type(1)
+{
+  background-image: url('../image/piedra.png');
+}
+
+.figuras button:nth-of-type(2)
+{
+  background-image: url('../image/papel.png');
+}
+
+.figuras button:nth-of-type(3)
+{
+  background-image: url('../image/tijera.png');
+}
+
+
+@media screen and (max-width: 767px)
+{
+  .container
+  {
+    /* grid-template-columns: 40% 20% 40%; */
+    /* background: red; */
+  }
+}
+
+@media screen and (max-width: 425px)
+{
+  .header
+  {
+    font-size: 1.5em;
+  }
+
+  .figuras button
+  {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+  }
+}
